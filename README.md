@@ -6,3 +6,4 @@ laboratorio
 =======
 #test locale
 >>>>>>> Stashed changes
+#ALTRO Test
