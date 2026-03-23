@@ -2,6 +2,7 @@
 laboratorio
 #QUESTA E' UNA PROVA
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #Test da locale la commit con desktop di github
 =======
 #test locale
@@ -9,3 +10,6 @@ laboratorio
 #ALTRO Test
 
 # 23/03/2026 Test 
+=======
+#Test upload da locale.
+>>>>>>> Stashed changes
