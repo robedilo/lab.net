@@ -1,0 +1,7 @@
+[
+  { "id": 1, "nome": "Mouse", "marca": "Logitech", "quantita": 15 },
+  { "id": 2, "nome": "Tastiera", "marca": "Corsair", "quantita": 8 },
+  { "id": 3, "nome": "Scheda video", "marca": "NVIDIA", "quantita": 3 },
+  { "id": 4, "nome": "RAM", "marca": "Kingston", "quantita": 20 },
+  { "id": 5, "nome": "SSD", "marca": "Samsung", "quantita": 10 }
+]

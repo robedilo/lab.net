@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Prodotti REST API</title>
+</head>
+<body>
+
+  <h1>Magazzino prodotti</h1>
+  <h2 id="server-info"></h2>
+
+  <button onclick="caricaProdotti()">Carica prodotti da REST API</button>
+
+  <table border="1">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Prodotto</th>
+        <th>Marca</th>
+        <th>Quantità</th>
+      </tr>
+    </thead>
+    <tbody id="tabella-prodotti"></tbody>
+  </table>
+
+  <script>
+async function caricaProdotti() {
+  const risposta = await fetch('/api/prodotti');
+  const data = await risposta.json();
+
+  const prodotti = data.prodotti;
+  const server = data.server;
+
+  // Mostra info container
+  document.getElementById('server-info').innerText =
+    "Risposta da: " + server.hostname + " (" + server.ip + ")";
+
+  const tabella = document.getElementById('tabella-prodotti');
+  tabella.innerHTML = '';
+
+  prodotti.forEach(prodotto => {
+    tabella.innerHTML += `
+      <tr>
+        <td>${prodotto.id}</td>
+        <td>${prodotto.nome}</td>
+        <td>${prodotto.marca}</td>
+        <td>${prodotto.quantita}</td>
+      </tr>
+    `;
+  });
+}
+  </script>
+
+</body>
+</html>
